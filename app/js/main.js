@@ -24,14 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
             text: null
         },
         data: {
-            googleSpreadsheetKey: '1YOKb5l2VM4aAB2r20N_1aT_1vEajYrP3U-U3A6lZbC0'
+            googleSpreadsheetKey: '1nVkygAHZlSMKTCzvsokjo6lykioxnYpNWUsSguPz-ME',
+            googleSpreadsheetWorksheet: 2
         },
         legend: {
-            align: 'right',
-            symbolRadius: 0,
-            verticalAlign: 'top',
-            x: 10,
-            itemMarginTop: -10
+            enabled: false
         },
         xAxis: {
             labels: {
@@ -46,14 +43,18 @@ document.addEventListener('DOMContentLoaded', function () {
             labels: {
                 useHTML: true,
                 overflow: 'allow'
-            }
+            },
+            tickAmount: 6
         },
         credits: {
             enabled: false
         },
         tooltip: {
             shadow: false,
-            padding: 10
+            padding: 10,
+            formatter: function () {
+                return this.y + "%";
+            }
         },
         responsive: {
             rules: [{
